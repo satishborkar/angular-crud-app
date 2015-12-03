@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="EmpLeavesSys">
+<head>
+  <title> ng crud app </title>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"/>
+  <link rel="stylesheet" type="text/css" href="css/angular-datepicker.css">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+      <link rel="stylesheet" type="text/css" href="css/style.css"/>
+      <link rel="stylesheet" type="text/css" href="css/loading-bar.css"/>
+    </head>
+
+    <body>
+      <div class="container-fluid" ng-include="'views/nav.html'"></div>
+      <div class="container-fluid" ng-include="'views/msgs.html'"></div>
+      <div class="container-fluid" ng-include="'views/newEmployee.html'" ng-show="addNewSection"></div>
+      <div class="container-fluid">
+        <div ui-view></div>
+      </div>
+
+
+
+      <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+      <script src= "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.2/angular.min.js"></script>
+      <script src= "https://code.angularjs.org/1.5.0-beta.2/angular-route.min.js"></script>
+      
+
+      <script src="js/angular-ui-router.js"></script>
+      <script type="text/javascript" src="js/angular-datepicker.js"></script>
+      <script type="text/javascript" src="js/smart-table.min.js"></script>
+      <script type="text/javascript" src="js/loading-bar.js"></script>
+
+      <script src="js/app.js"></script>
+</body>
+</html>

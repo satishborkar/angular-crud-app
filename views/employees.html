@@ -1,0 +1,51 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Employee Details</h3>
+  </div>
+  <div class="panel-body">
+    <div class="table-responsive">
+      <div class="pull-right fill-b-1">
+       <button class="btn btn-info btn-xs" ng-click="AddNew()"> Add New </button>
+       <button class="btn btn-danger btn-xs" ng-click="DeleteAll()"> Delete All </button>
+     </div>
+     <table class="table table-striped table-hover table-condensed" st-table="rowCollection" st-safe-src="employees">
+     <thead style="background:#337ab7; color:#fff">
+        <tr>
+          <th st-sort="empId"> Emp ID <i class="glyphicon glyphicon-sort"></i> </th>
+          <th st-sort="name"> Name <i class="glyphicon glyphicon-sort"></i> </th>
+          <th st-sort="department"> Department <i class="glyphicon glyphicon-sort"></i> </th>
+          <th st-sort="designation"> Designation <i class="glyphicon glyphicon-sort"></i> </th>
+          <th st-sort="contact"> Contact No. <i class="glyphicon glyphicon-sort"></i> </th>
+          <th st-sort="earnLeaves"> Earned Leaves <i class="glyphicon glyphicon-sort"></i> </th>
+          <th st-sort="obtainedLeaves"> Obtained Leaves <i class="glyphicon glyphicon-sort"></i> </th>
+          <th> Balanced Leaves </th>
+          <th st-sort="doj"> Date Of Joining <i class="glyphicon glyphicon-sort"></i> </th>
+          <th> Action </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="11" ng-show="!rowCollection.length" class="danger text-center" style="height:50px; line-height:50px"> No records found </td>
+        </tr>
+        <tr ng-repeat="emp in rowCollection">
+          <td>{{emp.empId}}</td>
+          <td>{{emp.name}}</td>
+          <td>{{emp.department}}</td>
+          <td>{{emp.designation}}</td>
+          <td>{{emp.contact}}</td>
+          <td>{{emp.earnLeaves}}</td>
+          <td>{{emp.obtainedLeaves}}</td>
+          <td>
+            {{emp.earnLeaves - emp.obtainedLeaves}}
+          </td>
+          <td> {{emp.doj}} </td>
+          <td style="min-width:95px">
+            <a href="javascript:void(0)" class="btn btn-warning btn-xs" ng-click="EditRecord(emp, $index)">Edit</a>
+            <a href="javascript:void(0)" ng-click="DeleteRecord($index)" class="btn btn-danger btn-xs">Delete</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>

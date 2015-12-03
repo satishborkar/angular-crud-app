@@ -1,0 +1,105 @@
+ <div class="panel panel-success">
+          <div class="panel-heading">
+            <h3 class="panel-title">Add new</h3>
+          </div>
+          <div class="panel-body">
+            <form class="form-horizontal">
+              <div class="form-group">
+                <div class="col-md-4 text-left">
+                 <label for="inputEmail3" class="col-sm-4 control-label text-left">Emp ID</label>
+                 <div class="col-sm-8">
+                   <input type="text" class="form-control" maxlength="4" ng-model="xData.empId">
+                 </div>
+               </div>
+
+               <div class="col-md-4">
+                 <label for="inputEmail3" class="col-sm-4 control-label text-left">Name</label>
+                 <div class="col-sm-8">
+                  <input type="text" class="form-control" ng-model="xData.name">
+                </div>
+              </div>
+
+              <div class="col-md-4">
+               <label for="inputEmail3" class="col-sm-4 control-label text-left">Department</label>
+               <div class="col-sm-8">
+                <select class="form-control" ng-model="xData.department" ng-init="xData.department = '0'">
+                  <option value="0"> ---Please select--- </option> 
+                  <option value="1"> Microsoft </option>
+                  <option value="2"> Java </option>
+                  <option value="3"> Quality Assurance </option>
+                  <option value="4"> Human Resource </option>
+                </select>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="form-group">
+            <div class="col-md-4">
+             <label for="inputEmail3" class="col-sm-4 control-label text-left"> Designation</label>
+             <div class="col-sm-8">
+              <select class="form-control" ng-model="xData.designation" ng-init="xData.designation = '0'">
+                <option value="0"> ---Please select--- </option>
+                <option value="1"> Jr.Software Engineer </option>
+                <option value="2"> Software Engineer </option>
+                <option value="3"> ASP.Net Developer </option>
+                <option value="4"> Java Deveoper </option>
+                <option value="5"> Sr.Java Deveoper </option>
+              </select>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+           <label for="inputEmail3" class="col-sm-4 control-label text-left"> Mobile </label>
+           <div class="col-sm-8">
+            <input type="text" class="form-control" ng-model="xData.contact" />
+          </div>
+        </div>
+
+
+        <div class="col-md-4">
+         <label for="inputEmail3" class="col-sm-4 control-label text-left"> Earned Leaves </label>
+         <div class="col-sm-8">
+          <select class="form-control" ng-model="xData.earnLeaves" ng-model="xData.earnLeaves"  ng-init="xData.earnLeaves = '0'">
+            <option value="0"> ---Please select--- </option>
+            <option value="1">25 </option>
+            <option value="2"> 35 </option>
+            <option value="3"> 45 </option>
+          </select>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="form-group">
+      <div class="col-md-4">
+       <label for="inputEmail3" class="col-sm-4 control-label text-left">Obtained Leaves</label>
+       <div class="col-sm-8">
+        <input type="text" class="form-control" ng-model="xData.obtainedLeaves" />
+      </div>
+    </div>
+
+    <div class="col-md-4">
+     <label for="inputEmail3" class="col-sm-4 control-label text-left"> Date Of Joining </label>
+     <div class="col-sm-8">
+     <datepicker date-format="yyyy/MM/dd">
+        <input type="text" class="form-control"  ng-model="xData.doj" name="date" placeholder="Select date" readonly required />
+      </datepicker>
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+  <div class="col-md-8">
+    <div class="col-md-10 pull-right">
+      <button class="btn btn-success btn-sm" ng-show="newRecordBtn" ng-click="AddNewRecord(xData)"> Save </button>
+      <button class="btn btn-info btn-sm" ng-show="updateBtn" ng-click="UpdateRecord(xData, $index)"> Update </button>
+      <button class="btn btn-default btn-sm" ng-show="resetBtn" ng-click="ResetForm()"> Reset </button>
+      <button class="btn btn-danger btn-sm" ng-click="CancelForm()"> Cancel </button>
+    </div>
+  </div>
+</div>
+</form>
+</div>
+</div>
